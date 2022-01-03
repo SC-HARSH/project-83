@@ -37,7 +37,7 @@ function my_mousemove(e) {
         ctx.beginPath();
         ctx.strokeStyle = color;
         ctx.lineWidth = width;
-        ctx.arc(curx, cury, radius, 0 , 2*Math.PI);
+        ctx.arc(lastcoordx, lastcoordy, radius, 0 , 2*Math.PI);
         ctx.stroke();
     };
     lastcoordx = currentcoordx;
@@ -75,7 +75,7 @@ function my_touchmove(e) {
     radius = document.getElementById("radius").value;
     ctx.strokeStyle = color;
     ctx.lineWidth = width;
-    ctx.arc(curx, cury, radius, 0 , 2*Math.PI);
+    ctx.arc(lastx, lasty, radius, 0 , 2*Math.PI);
     ctx.stroke();
     lastx = curx;
     lasty = cury;
